@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    tr#shag1{
+            color: white;
+            }
+    </style>
+</head>
+<body>
+  <table border="1">
+   <tr bgcolor="black" id="shag1">
+       <th>Task</th>
+       <th>Status</th>
+       <th>Output</th>
+       <th>Lead time</th>
+   </tr>
+      {% if output_info %}
+        {% for column in output_info %}
+            <tr>
+                <td>{{column[0]}}</td>
+                <td>{{column[1]}}</td>
+                <td>{{column[2]}}</td>
+                <td>{{column[3]}}</td>
+            </tr>
+        {% endfor %}
+      {% endif %}
+ </table>
+</body>
+</html>
